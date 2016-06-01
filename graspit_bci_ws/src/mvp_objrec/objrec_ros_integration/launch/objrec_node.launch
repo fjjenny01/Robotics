@@ -1,0 +1,51 @@
+<launch>
+    <node pkg="nodelet" type="nodelet" name="pcl_manager" args="manager" output="screen" />
+    <node pkg="nodelet" type="nodelet" name="passthroughx" args="load pcl/PassThrough pcl_manager" output="screen">
+        <remap from="~input" to="/kinect_head/depth_registered/points" />
+        <remap from="~output" to="/filtered/x" />
+        <rosparam>
+            filter_field_name: x
+            filter_limit_min: -0.45
+            filter_limit_max: 0.24
+            filter_limit_negative: False
+            input_frame: ar_marker_0
+            output_frame: ar_marker_0
+        </rosparam>
+    </node>
+    <node pkg="nodelet" type="nodelet" name="passthroughy" args="load pcl/PassThrough pcl_manager" output="screen">
+        <remap from="~input" to="/filtered/x" />
+        <remap from="~output" to="/filtered/y" />
+        <rosparam>
+            filter_field_name: y
+            filter_limit_min: -0.25
+            filter_limit_max: 0.4
+            filter_limit_negative: False
+            input_frame: ar_marker_0
+            output_frame: ar_marker_0
+        </rosparam>
+    </node>
+    <node pkg="nodelet" type="nodelet" name="passthroughz" args="load pcl/PassThrough pcl_manager" output="screen">
+        <remap from="~input" to="/filtered/y" />
+        <remap from="~output" to="/filtered/z" />
+        <rosparam>
+            filter_field_name: z
+            filter_limit_min: -0.15
+            filter_limit_max: 0.4
+            filter_limit_negative: False
+            input_frame: ar_marker_0
+            output_frame: head_mount_kinect_rgb_optical_frame
+        </rosparam>
+    </node>
+    <node pkg="objrec_ros_integration" type="objrec_node" name="objrec_node" output="screen">
+        <remap from="~/points" to="/filtered/z"/>
+    </node>
+
+    <group ns="objrec_node">
+        <include file="$(find objrec_ros_integration)/launch/parameters.launch"/>
+        <include file="$(find objrec_ros_integration)/launch/models.launch"/>
+    </group>
+</launch>
+
+
+
+

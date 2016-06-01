@@ -1,0 +1,39 @@
+<launch>
+  <rosparam ns="models">
+    ['all', 'garnier_shampoo_bottle']
+  </rosparam>
+  <!-- <rosparam ns="models"> -->
+  <!--   ['rubbermaid_ice_guard_pitcher_blue', -->
+  <!--   'play_go_rainbow_stakin_cups_5_green', 'cheerios_14oz', 'domino_sugar_1lb', -->
+  <!--   'morton_salt_shaker', 'gillette_shaving_gel', 'purple_wood_block_1inx1in', -->
+  <!--   'garnier_shampoo_bottle', 'block_of_wood_12in', 'block_of_wood_6in', 'all'] -->
+  <!-- </rosparam> -->
+  <!-- </rosparam> -->
+  <!-- all models -->
+  <!-- <rosparam ns="models"> -->
+  <!--   ['rubbermaid_ice_guard_pitcher_blue', 'red_metal_plate_white_speckles', -->
+  <!--   'play_go_rainbow_stakin_cups_2_orange', -->
+  <!--   'frenchs_classic_yellow_mustard_14oz', 'brine_mini_soccer_ball', -->
+  <!--   'comet_lemon_fresh_bleach', 'champion_sports_official_softball', -->
+  <!--   'soft_scrub_2lb_4oz', 'play_go_rainbow_stakin_cups_1_yellow', -->
+  <!--   'black_and_decker_lithium_drill_driver', -->
+  <!--   'melissa_doug_farm_fresh_fruit_pear', 'drill_custom', -->
+  <!--   'play_go_rainbow_stakin_cups_5_green', 'cheerios_14oz', 'domino_sugar_1lb', -->
+  <!--   'milk_carton', 'red_metal_cup_white_speckles', 'airplane', -->
+  <!--   'large_black_spring_clamp', 'melissa_doug_farm_fresh_fruit_orange', -->
+  <!--   'melissa_doug_farm_fresh_fruit_strawberry', 'clorox_disinfecting_wipes_35', -->
+  <!--   'orange_wood_block_1inx1in', 'melissa_doug_farm_fresh_fruit_banana', -->
+  <!--   'morton_salt_shaker', 'gillette_shaving_gel', 'purple_wood_block_1inx1in', -->
+  <!--   'red_metal_bowl_white_speckles', 'medium_black_spring_clamp', -->
+  <!--   'mug_custom2', 'pringles_original', 'play_go_rainbow_stakin_cups_3_red', -->
+  <!--   'garnier_shampoo_bottle', 'master_chef_ground_coffee_297g', -->
+  <!--   'block_of_wood_12in', 'darpaphonehandset_1000_original_coordinate_system', -->
+  <!--   'block_of_wood_6in', 'darpaphonehandset_1000_different_coordinate_system', -->
+  <!--   'spam_12oz', 'campbells_condensed_tomato_soup', 'penn_raquet_ball', 'all', -->
+  <!--   'melissa_doug_farm_fresh_fruit_lemon', -->
+  <!--   'melissa_doug_farm_fresh_fruit_apple', 'blue_wood_block_1inx1in', -->
+  <!--   'darpaflashlight', 'sponge_with_textured_cover'] -->
+  <!-- </rosparam> -->
+
+  <include file="$(find object_models)/launch/all_models.launch" />
+</launch>
