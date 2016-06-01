@@ -1,0 +1,1 @@
+graspit_msgs/ObjectInfo[] objects

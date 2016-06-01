@@ -1,0 +1,9 @@
+#goal definition
+graspit_msgs/Grasp grasp
+---
+#result definition
+bool isPossible
+int32 grasp_id
+---
+#feedback
+

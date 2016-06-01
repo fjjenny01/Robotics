@@ -1,0 +1,7 @@
+
+#goal definition
+---
+#result definition
+graspit_msgs/ObjectInfo[] object_info
+---
+#feedback
