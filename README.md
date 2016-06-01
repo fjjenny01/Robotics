@@ -18,3 +18,6 @@ Object Recognition
 On darcy navigate to /home/rbtying/graspit_bci_ws adn start the object recognition node
 
 roslaunch objrec_ros_integration objrec_node.launch
+
+To see the output of objrec_node, run Rviz
+rosrun rviz rviz
